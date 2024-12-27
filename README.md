@@ -1,24 +1,5 @@
 # Shoping_website
 
-#Standard Flask project structure
-
-project/
-│
-├── app/
-│   ├── __init__.py       # Initialize the Flask app
-│   ├── routes.py         # Define your routes
-│   ├── models.py         # Database models
-│   ├── forms.py          # Web forms (if needed)
-│   ├── static/           # Static files (CSS, JS, images)
-│   └── templates/        # HTML templates
-│       ├── base.html     # Base template
-│       └── index.html    # Home page template
-│
-├── config.py             # Configuration settings
-├── requirements.txt      # Dependencies
-├── run.py                # Entry point to run the app
-└── .gitignore            # Ignore unnecessary files
-
 Shopping Website - Backend
 A robust and scalable backend for a shopping website built with Flask and SQLAlchemy. This project provides core functionality for user authentication, product management, and order processing, making it the backbone of an intuitive and dynamic e-commerce platform.
 
@@ -40,3 +21,23 @@ This project is developed collaboratively. Contributions are welcome!
 Clone the repository and create a feature branch.
 Make your changes and test thoroughly.
 Open a pull request for review.
+
+
+#Standard Flask project structure
+
+project/
+│
+├── app/
+│   ├── __init__.py       # Initialize the Flask app
+│   ├── routes.py         # Define your routes
+│   ├── models.py         # Database models
+│   ├── forms.py          # Web forms (if needed)
+│   ├── static/           # Static files (CSS, JS, images)
+│   └── templates/        # HTML templates
+│       ├── base.html     # Base template
+│       └── index.html    # Home page template
+│
+├── config.py             # Configuration settings
+├── requirements.txt      # Dependencies
+├── run.py                # Entry point to run the app
+└── .gitignore            # Ignore unnecessary files
