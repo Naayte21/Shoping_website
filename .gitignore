@@ -1,4 +1,18 @@
-.venv/
-__pycache__/
+# Python
 *.pyc
-.env
+*.pyo
+__pycache__/
+env/
+.venv/
+
+# Flask-SQLAlchemy database
+instance/
+*.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
