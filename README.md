@@ -26,8 +26,11 @@ Open a pull request for review.
 #You can recreate the virtual environment using the following commands
 
 python -m venv env
+
 source env/bin/activate  # On Linux/Mac
+
 env\Scripts\activate     # On Windows
+
 pip install -r requirements.txt
 
 
