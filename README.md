@@ -27,9 +27,9 @@ Open a pull request for review.
 
 python -m venv .venv
 
-source env/bin/activate  # On Linux/Mac
+source .venv/bin/activate  # On Linux/Mac
 
-env\Scripts\activate     # On Windows
+.venv\Scripts\activate     # On Windows
 
 pip install -r requirements.txt
 
