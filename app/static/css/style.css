@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  /* color */
+  --bg-color: #f5f5f5;
+  --text-layer: #f5f5f5;
+  --text-color: #2c2c2c;
+  --hover-text: #ee1c57;
+  --p-color: #333c56;
+  --p-product: #151515;
+  --rate: #ff8c00;
+  --sale-color: #27b737;
+  /* border */
+  --main-border: 1px solid #111;
+  --bx-shadow: 0px 0px 10px rgb(0 0 0 10%);
+  --border-radius: 2px;
+}
+
+/*  ====  == BASE =====  == */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+}
+header.sticky {
+  padding: 20px 10%;
+  background: var(--bg-color);
+  box-shadow: var(--bx-shadow);
+}
+
+section {
+  padding: 3% 10%;
+}
+
+/* ==== Usable Css  ==== */
+.logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu a {
+  color: var(--text-color);
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+.navmenu a:hover {
+  color: var(--hover-text);
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+.nav-icon i {
+  margin-right: 20px;
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: 400;
+  transition: all 0.42s ease-in-out;
+}
+.nav-icon i:hover {
+  transform: scale(1.1);
+  color: var(--hover-text);
+}
+#menu-icon {
+  font-size: 35px;
+  color: var(--text-color);
+  z-index: 10001;
+  cursor: pointer;
+}
+
+/* ===  MAIN    ======== */
+.main-home {
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(to top right,
+     rgba(248, 248, 248, 0.),
+     rgba(20, 20, 20, 0.5)
+    ),
+    url("/image/WINGBT2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+  background-image: url(/image/pink.jpg);
+  background-position: top;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: (1, 1fr);
+  align-items: center;
+}
+
+.main-text h5 {
+  color: var(--text-color);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.main-text h1 {
+  color: var(--text-color);
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 1, 1;
+  font-weight: 600;
+  margin: 6px 0 10px;
+}
+.main-text p {
+  color: var(--p-color);
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.main-btn {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: var(--main-border);
+  border-radius: 10px;
+  padding: 12px 25px;
+  transition: all 0.42s ease;
+}
+
+.main-btn:hover {
+  background-color: var(--text-color);
+  color: var(--hover-text);
+}
+
+.main-btn i {
+  vertical-align: middle;
+}
+
+.down-arrow {
+  position: absolute;
+  top: 85%;
+  right: 11%;
+}
+.down i {
+  font-size: 30px;
+  color: var(--text-color);
+  border: var(--main-border);
+  border: radius 50px;
+  padding: 12px 12px;
+}
+.down i:hover {
+  background-color: var(--text-color);
+  color: var(--hover-text);
+  transition: all 0.42s ease;
+}
+
+/* ===== TRENDING SECTION ===== */
+.center-text {
+  color: var(--text-color);
+  font-size: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.center-text span {
+  color: var(--hover-text);
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  gap: 2rem;
+}
+
+.row {
+  position: relative;
+  transition: all 0.42s;
+}
+.row img {
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+}
+
+.row img:hover {
+  transform: scale(0.9);
+}
+.product-text h5 {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  color: var(--text-layer);
+  background-color: var(--sale-color);
+  border-radius: var(--border-radius);
+}
+.heart-icon {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+}
+.heart-icon:hover {
+  color: var(--hover-text);
+}
+.ratting i {
+  color: var(--rate);
+  font-size: 18px;
+}
+
+.price h4 {
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.price p {
+  color: var(--p-product);
+  font-size: 14px;
+  font-weight: 600;
+}
