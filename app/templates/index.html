@@ -1,5 +1,33 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<h1>Melz and Nayte</h1>
-{% endblock %}
+{% extends "base.html" %}
 
+{% block title %}Home - Nayte & Melz Store{% endblock %}
+
+{% block content %}
+<section class="main-home">
+    <div class="main-text">
+        <h5>BOLD AND DARING</h5>
+        <h1>HAND BAGS</h1>
+        <p>There's Nothing Like Trend</p>
+        <a href="#" class="main-btn">SHOP COLLECTION <i class="bx bx-right-arrow-alt"></i></a>
+    </div>
+    <div class="down-arrow">
+        <a href="#trending"><i class="bx bx-down-arrow-alt"></i></a>
+    </div>
+</section>
+
+<section class="trending-product" id="trending">
+    <div class="center-text">
+        <h2>OUR TRENDING <span>PRODUCTS</span></h2>
+    </div>
+    <div class="products">
+        <div class="row">
+            <img src="{{ url_for('static', filename='image/product1.webp') }}" alt="Product 1">
+            <div class="price">
+                <h4>Product 1</h4>
+                <p>R300</p>
+            </div>
+        </div>
+        <!-- Add more products here -->
+    </div>
+</section>
+{% endblock %}

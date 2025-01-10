@@ -1,308 +1,43 @@
-{% comment %} <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block head %} <link rel="stylesheet" href="{% url
-    "/app/static/css/style.css" %} /app/static/css/style.css" />
-    <title>{% block title %}{% endblock %}Shop</title>
-    {% endblock %}
-  </head>
-  <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-  </body>
-</html>
-{% endcomment %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shop web</title>
-
-    <!-- === CSS links ==== -->
-    {% block head %} <link rel="stylesheet" href="{% url
-    "/app/static/css/style.css" %} /app/static/css/style.css" />
-
-    <!-- === ICONS  LINKS==== -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-    <!-- or -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
-  </head>
-  <body>
-    <!-- Header start -->
-    {%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>{% block title %}Shop{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
     <header>
-      <a href="#" class="logo">Nayte & Melz store </a>
-      <ul class="navmenu">
-        <li><a href="#">New & Best</a></li>
-        <li><a href="#">Apperel</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">foot wear</a></li>
-        <li><a href="#">GXB Info</a></li>
-      </ul>
-
-      <div class="nav-icon">
-        <a href="#"><i class="bx bx-user"></i></a>
-        <a href="#"><i class="bx bx-search"></i></a>
-        <a href="#"><i class="bx bx-cart"></i></a>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </div>
+        <a href="#" class="logo">Nayte & Melz Store</a>
+        <ul class="navmenu">
+            <li><a href="#">New & Best</a></li>
+            <li><a href="#">Apparel</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Footwear</a></li>
+            <li><a href="#">GXB Info</a></li>
+        </ul>
+        <div class="nav-icon">
+            <a href="#"><i class="bx bx-user"></i></a>
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bx-cart"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
-    {%endblock%}
 
-    <!-- ===MAIN  START == -->
-    {%block content%}
-    <section class="main-home">
-      <div class="main-text">
-        <h5>BOLD AND DARLING</h5>
-        <h1>HAND BAGS</h1>
-        <p>There's Nothing Like trend</p>
+    <!-- Main Content -->
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
 
-        <a href="#" class="main-btn">
-          SHOP COLLECTION <i class="bx bx-right-arrow-alt"></i>
-        </a>
-      </div>
-      <div class="down-arrow">
-        <a href="#trending"><i class="bx bx-down-arrow-alt"></i></a>
-      </div>
-    </section>
-    {%endblock%}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nayte & Melz Store</p>
+    </footer>
 
-    <!-- === NEW PRODUCT SECTION  -->
-    {%block content%}
-    <section class="trending-product" id="trending">
-      <div class="center-text">
-        <h2>OUR TRENDING <span>PRODUCT</span></h2>
-      </div>
-      <div class="products">
-        <div class="row">
-          <img src="/image/Necklace_product_image_2.webp" alt="" />
-          <div class="product-text">
-            <h5>New</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>Necklace</h4>
-            <p>R300</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/CLOSE-UP-IMAGE.webp" alt="" />
-          <div class="product-text">
-            <h5>Sale</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>GXB Chain</h4>
-            <p>R400</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/earrings.webp" alt="" />
-          <div class="product-text">
-            <h5>Sale</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>GXB earrings</h4>
-            <p>R400</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/IN-THE-STARS-BLACK-HAT.webp" alt="" />
-          <div class="product-text">
-            <!-- <h5>Sale</h5> -->
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>GXB Black Hat</h4>
-            <p>R350</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/IN-THE-STARS-CROP-TOP.webp" alt="" />
-          <div class="product-text">
-            <h5>New</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>Crop top</h4>
-            <p>R250</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/mesh-crop-top.webp" alt="" />
-          <div class="product-text">
-            <h5>New</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>Crop Top</h4>
-            <p>R250</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/C-THRU-OG-WING.webp" alt="" />
-          <div class="product-text">
-            <h5>New</h5>
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>T-shirt</h4>
-            <p>R500</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/ROCKING-THE-GLOBE-BACK.webp" alt="" />
-          <div class="product-text">
-            <!-- <h5>Sale</h5> -->
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>T-Shirt</h4>
-            <p>R500</p>
-          </div>
-        </div>
-        <div class="row">
-          <img src="/image/wing.png" alt="" />
-          <div class="product-text">
-            <!-- <h5>Sale</h5> -->
-          </div>
-          <div class="heart-icon">
-            <i class="bx bx-heart"></i>
-          </div>
-          <div class="ratting">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
-          </div>
-
-          <div class="price">
-            <h4>GXB graphic T-shirt</h4>
-            <p>R600</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    {%block content%}
-
-    <!-- ==== CLIENT REVIEWS =====
-    <section class="client-reviews">
-      <div class="review">
-        <h3>Client Reviews</h3>
-        <img src="/image/WINGBT2.webp" alt="" />
-        <p>
-          "The only website i feel when shopping "<div class="review">
-        <h3>Client Reviews</h3>
-        <img src="/image/WINGBT2.webp" alt="" />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
-          ipsum minima laudantium modi commodi ratione harum impedit, itaque
-          rerum necessitatibus.
-        </p>
-        <h2>Angel Khoza</h2>
-        <p>Model</p>
-      </div>
-        </p>
-        <h2>Angel Khoza</h2>
-        <p>Model</p>
-      </div>
-    </section> -->
-
-    <!-- ====SCRIPT==== -->
-    {%block content%}
-
-    <script src="/app/static/js/script.js"></script>
-    {%endblock%}
-  </body>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
 </html>
