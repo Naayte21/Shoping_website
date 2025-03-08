@@ -1,9 +1,11 @@
-from app import db
+from . import db
 
-class User(db.Model):
+
+class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(150), unique=True, nullable=False)
-    email = db.Column(db.String(150), unique=True, nullable=False)
+    name = db.Column(db.String(100), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    image = db.Column(db.String(100), nullable=False)
 
     def __repr__(self):
-        return f"<User {self.username}>"
+        return f"<Product {self.name}>"
